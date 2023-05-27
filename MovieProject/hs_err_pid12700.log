@@ -1,0 +1,204 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=12700, tid=7088
+#
+# JRE version:  (17.0.4.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.4.1+1, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\BackEnd\works\MovieProject\Lib\jsoup-1.15.3.jar;C:\BackEnd\works\MovieProject\Lib\ojdbc6.jar -XX:+ShowCodeDetailsInExceptionMessages ex01.ContactManager
+
+Host: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+Time: Fri May 26 22:05:17 2023  Windows 10 , 64 bit Build 19041 (10.0.19041.2913) elapsed time: 0.015432 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000243c7bedc60):  JavaThread "Unknown thread" [_thread_in_vm, id=7088, stack(0x0000008814100000,0x0000008814200000)]
+
+Stack: [0x0000008814100000,0x0000008814200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67731a]
+V  [jvm.dll+0x832284]
+V  [jvm.dll+0x833a2e]
+V  [jvm.dll+0x834093]
+V  [jvm.dll+0x245775]
+V  [jvm.dll+0xa6393]
+V  [jvm.dll+0x2d7234]
+V  [jvm.dll+0x803d7c]
+V  [jvm.dll+0x3698f1]
+V  [jvm.dll+0x7e31bc]
+V  [jvm.dll+0x3ec25f]
+V  [jvm.dll+0x3edde1]
+C  [jli.dll+0x5277]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffcdbdb4e98, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000243c7bedc60 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7088, stack(0x0000008814100000,0x0000008814200000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.011 Loaded shared library C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6b75a0000 - 0x00007ff6b75ae000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\javaw.exe
+0x00007ffd6b5b0000 - 0x00007ffd6b7a8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffd69610000 - 0x00007ffd696cf000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffd68f30000 - 0x00007ffd69226000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffd68cc0000 - 0x00007ffd68dc0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd5df90000 - 0x00007ffd5dfa9000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\VCRUNTIME140.dll
+0x00007ffd5f8a0000 - 0x00007ffd5f8b8000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\jli.dll
+0x00007ffd69a80000 - 0x00007ffd69c1d000 	C:\Windows\System32\USER32.dll
+0x00007ffd68e70000 - 0x00007ffd68e92000 	C:\Windows\System32\win32u.dll
+0x00007ffd6a6e0000 - 0x00007ffd6a70c000 	C:\Windows\System32\GDI32.dll
+0x00007ffd69230000 - 0x00007ffd69345000 	C:\Windows\System32\gdi32full.dll
+0x00007ffd5ccc0000 - 0x00007ffd5cf5a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffd693a0000 - 0x00007ffd6943d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffd6a890000 - 0x00007ffd6a92e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffd6a240000 - 0x00007ffd6a270000 	C:\Windows\System32\IMM32.DLL
+0x00007ffd5df60000 - 0x00007ffd5df6c000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\vcruntime140_1.dll
+0x00007ffcf8490000 - 0x00007ffcf8521000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\msvcp140.dll
+0x00007ffcdb2a0000 - 0x00007ffcdbee6000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\server\jvm.dll
+0x00007ffd69fe0000 - 0x00007ffd6a08f000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffd696d0000 - 0x00007ffd6976c000 	C:\Windows\System32\sechost.dll
+0x00007ffd6a090000 - 0x00007ffd6a1b6000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffd6a1c0000 - 0x00007ffd6a1c8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffd564b0000 - 0x00007ffd564b9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffd5e1e0000 - 0x00007ffd5e1ea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffd6a1d0000 - 0x00007ffd6a23b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffd5e7b0000 - 0x00007ffd5e7d7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd674e0000 - 0x00007ffd674f2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffd64be0000 - 0x00007ffd64bea000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\jimage.dll
+0x00007ffd619a0000 - 0x00007ffd61b84000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffd58a40000 - 0x00007ffd58a74000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffd68ea0000 - 0x00007ffd68f22000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffd4fb30000 - 0x00007ffd4fb55000 	C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\BackEnd\install\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\BackEnd\works\MovieProject\Lib\jsoup-1.15.3.jar;C:\BackEnd\works\MovieProject\Lib\ojdbc6.jar -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: ex01.ContactManager
+java_class_path (initial): C:\BackEnd\works\MovieProject\bin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4265607168                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4265607168                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\BackEnd\install\jdk-11.0.2
+PATH=C:/BackEnd/install/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038/jre/bin/server;C:/BackEnd/install/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20220903-1038/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\BackEnd\install\jdk-11.0.2\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Bandizip\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\thdus\AppData\Local\Microsoft\WindowsApps;C:\Users\thdus\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\thdus\AppData\Local\GitHubDesktop\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\BackEnd\install\eclipse;
+USERNAME=thdus
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+TMP=C:\Users\thdus\AppData\Local\Temp
+TEMP=C:\Users\thdus\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2913)
+OS uptime: 16 days 4:07 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 9 microcode 0xb4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 16267M (7533M free)
+TotalPageFile size 26910M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 10M, peak: 11M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.4.1+1) for windows-amd64 JRE (17.0.4.1+1), built on Aug 17 2022 07:42:43 by "temurin" with MS VC++ 16.7 (VS2019)
+
+END.
