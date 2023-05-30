@@ -1,3 +1,3 @@
 # Mini_project_add
 
-Add more functions from Mini_project
+Addedd more functions from Mini_project (ref. Naver Movie)
