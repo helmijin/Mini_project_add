@@ -11,53 +11,9 @@ public class ContactManager {
 		run();
 	}
 	
-	private static void DeleteMovie(Scanner sc) {
-		DataDAO dd = DataDAO.newInstance();
-		dd.DeleteMovie();
-		run();
-	}
- 
-	private static void ListMovie() {
-		DataDAO dd = DataDAO.newInstance();
-		dd.ListMovie();
-		run();
-	}
-	
- 
-	private static void AddMovie() {
-		 DataDAO dd = DataDAO.newInstance();
-		 dd.AddMovie();
-		 run();
-	}
-
-	private static void SearchMovie(Scanner sc) {
-		DataDAO dd = DataDAO.newInstance();
-		dd.SearchMovie();
-		run();
-	}
-	
-	private static void RandomMovie(Scanner sc) {
-		DataDAO dd = DataDAO.newInstance();
-		dd.RandomMovie();
-		run();
-	}
-	
-	private static void CrawlingMovie(Scanner sc) {
-		DataDAO dd = DataDAO.newInstance();
-		dd.CrawlingMovie();
-		run();
-	}
-	
-	private static void ChoiceMyList(Scanner sc) {
-		DataDAO dd = DataDAO.newInstance();
-		dd.ChoiceMyList();
-		run();
-	}
-	
 	private static void run()  {
 		boolean runx = true;
 		int num = 0;
-		String serchstr = "";
 		System.out.println("===============================================");
 		System.out.println("            ★메             뉴★               ");
 		System.out.println();
@@ -120,5 +76,47 @@ public class ContactManager {
 				System.out.println();
 			}
 		}
+	}
+	
+	private static void ListMovie() {
+		DataDAO dd = DataDAO.newInstance();
+		dd.ListMovie();
+		run();
+	}
+	
+	private static void AddMovie() {
+		 DataDAO dd = DataDAO.newInstance();
+		 dd.AddMovie();
+		 run();
+	}
+	
+	private static void DeleteMovie(Scanner sc) {
+		DataDAO dd = DataDAO.newInstance();
+		dd.DeleteMovie();
+		run();
+	}
+
+	private static void SearchMovie(Scanner sc) {
+		DataDAO dd = DataDAO.newInstance();
+		dd.SearchMovie();
+		run();
+	}
+	
+	private static void RandomMovie(Scanner sc) {
+		DataDAO dd = DataDAO.newInstance();
+		dd.RandomMovie();
+		run();
+	}
+	
+	private static void CrawlingMovie(Scanner sc) {
+		DataDAO dd = DataDAO.newInstance();
+		dd.CrawlingMovie();
+		run();
+	}
+	
+	private static void ChoiceMyList(Scanner sc) {
+		DataDAO dd = DataDAO.newInstance();
+		dd.ChoiceMyList();
+		run();
 	}
 }

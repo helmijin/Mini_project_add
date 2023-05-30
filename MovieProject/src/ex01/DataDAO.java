@@ -136,7 +136,7 @@ public class DataDAO {
 			getConnection();
 
 			//2. sql문 작성
-			String sql = "DROP TABLE MOVIETABLE_SQL";
+			String sql = "DROP SEQUENCE MOVIETABLE_SQL";
 
 			//3. 오라클로 sql 문장 전송
 			pstmt = conn.prepareStatement(sql);
@@ -151,8 +151,10 @@ public class DataDAO {
 
 	public void CrawlingMovie() {
 		System.out.println("<크롤링 하는 중입니다..>");
+		
 		List<MovieVO> list = new ArrayList<>();
 		DataDAO dao = DataDAO.newInstance(); 
+		
 		try {
 			for(int i=0; i<1; i++) {
 
@@ -222,7 +224,7 @@ public class DataDAO {
 					//영화 시간
 					mvo.setTimes(time2.text());
 					//영화 개봉일
-					mvo.setDates(date2.text());
+					mvo.setDates(date1.text());
 					//직접 추가한 내용 아니기 때문에 공백
 					mvo.setAdds("");
 					//관람객 리뷰
@@ -232,7 +234,7 @@ public class DataDAO {
 
 					list.add(mvo);
 
-					dao.MovieInsert(mvo);
+					dao.InsertMovie(mvo);
 				}
 				System.out.println("<크롤링 하는 중입니다...>");
 			}
@@ -287,9 +289,9 @@ public class DataDAO {
 
 			//3. 오라클로 sql문장 전송
 			pstmt = conn.prepareStatement(sql);
+			
 			//4. ? 값 저장
 			MovieVO mvo = new MovieVO();
-
 			Scanner sc1 = new Scanner(System.in);
 			//영화 제목
 			System.out.print(">영화 제목   : ");
@@ -314,7 +316,7 @@ public class DataDAO {
 			mvo.setDates(sc1.next()); 
 			mvo.setAdds("추가");
 
-			dao.MovieInsert(mvo);
+			dao.InsertMovie(mvo);
 
 			//5. 전송된 값을 커밋 또는 업데이트
 			//pstmt.executeUpdate();
@@ -327,13 +329,13 @@ public class DataDAO {
 
 	}
 
-	public void MovieInsert(MovieVO se) {
+	public void InsertMovie(MovieVO se) {
 		try {
 			//1. DB연결
 			getConnection();
 
 			//2. sql문 작성
-			String sql = "insert into Movietable values(Movietable_sql.nextval, ?,?,?,?,?,?,?)";
+			String sql = "insert into Movietable values(Movietable_sql.nextval, ?,?,?,?,?,?,?,?,?,?)";
 
 			//3. 오라클로 sql문장 전송
 			pstmt = conn.prepareStatement(sql);
@@ -713,7 +715,7 @@ public class DataDAO {
 			getConnection();
 
 			//2. sql문 작성
-			String sql = "select * from Movietable where (title || genre || Act || dir) like ?";
+			String sql = "select * from Movie_MyList where (title || genre || Act || dir) like ?";
 			System.out.println("제목이나 장르 혹은 배우나 감독의 이름을 입력해주세요");
 
 			//3. 오라클로 sql문장 전송
@@ -845,8 +847,8 @@ public class DataDAO {
 			//1. DB연결
 			getConnection();
 
-			//2. sql문 작성
-			String sql = "Delete from Movie_MyList where adds = '추가'";
+			//2. sql문 작성 - 항목 전체 삭제
+			String sql = "Delete from Movie_MyList";
 
 			//3. 오라클로 sql문장 전송
 			pstmt = conn.prepareStatement(sql);
