@@ -100,12 +100,12 @@ public class ContactManager {
 			case 6:
 				System.out.println();
 				System.out.println("<6. 랜덤>");
-				RandomMovie();
+				RandomMovie(sc);
 				break;
 			case 7:
 				System.out.println();
 				System.out.println("<7. 마이리스트>");
-				ChoiceMyList();
+				ChoiceMyList(sc);
 				break;
 			case 8:
 				System.out.println();

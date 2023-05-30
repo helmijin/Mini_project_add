@@ -2,7 +2,7 @@ package ex01;
 
 class MovieVO {
 
-	private int num;
+	private int no;
 	private String title;
 	private String rate;
 	private String genre;
@@ -15,11 +15,11 @@ class MovieVO {
 	private String summary;
 
 	public int getNum() {
-		return num;
+		return no;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	public void setNum(int no) {
+		this.no = no;
 	}
 
 	public String getTitle() {
