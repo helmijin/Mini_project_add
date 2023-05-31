@@ -22,7 +22,7 @@ public class DataDAO {
 	private ResultSet rs = null;
 	private static DataDAO dao;
 	private final String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private final String user = "Movie";
+	private final String user = "movie";
 	private final String pwd  = "1234";
 
 	private DataDAO() {
