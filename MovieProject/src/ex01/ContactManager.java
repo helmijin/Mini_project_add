@@ -6,25 +6,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ContactManager {
-	
+
 	public static void main(String[] args) {
 		run();
 	}
-	
+
 	private static void run()  {
 		boolean runx = true;
 		int num = 0;
 		System.out.println("===============================================");
 		System.out.println("            ★메             뉴★               ");
 		System.out.println();
+		System.out.println("   1.리스트   2.등록      3.삭제        4.검색    ");
+		System.out.println("   5.크롤링   6.랜덤추천   7.마이리스트    8.종료    ");
+		System.out.println("===============================================");
+		System.out.print("메뉴번호 >> ");
+
 		while (runx) {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("   1.리스트   2.등록      3.삭제        4.검색    ");
-			System.out.println("   5.크롤링   6.랜덤추천   7.마이리스트    8.종료    ");
-			System.out.println("===============================================");
-			System.out.print("메뉴번호 >> ");
 			num = sc.nextInt();
- 
+
 			switch (num) {
 			case 1:
 				System.out.println();
@@ -68,7 +69,6 @@ public class ContactManager {
 				System.out.println("***************************************");
 				System.out.println("*              감사합니다                *");
 				System.out.println("***************************************");
-				sc.close();
 				runx = false;
 				break;
 			default:
@@ -77,19 +77,19 @@ public class ContactManager {
 			}
 		}
 	}
-	
+
 	private static void ListMovie() {
 		DataDAO dd = DataDAO.newInstance();
 		dd.ListMovie();
 		run();
 	}
-	
+
 	private static void AddMovie() {
-		 DataDAO dd = DataDAO.newInstance();
-		 dd.AddMovie();
-		 run();
+		DataDAO dd = DataDAO.newInstance();
+		dd.AddMovie();
+		run();
 	}
-	
+
 	private static void DeleteMovie(Scanner sc) {
 		DataDAO dd = DataDAO.newInstance();
 		dd.DeleteMovie();
@@ -101,19 +101,19 @@ public class ContactManager {
 		dd.SearchMovie();
 		run();
 	}
-	
+
 	private static void RandomMovie(Scanner sc) {
 		DataDAO dd = DataDAO.newInstance();
 		dd.RandomMovie();
 		run();
 	}
-	
+
 	private static void CrawlingMovie(Scanner sc) {
 		DataDAO dd = DataDAO.newInstance();
 		dd.CrawlingMovie();
 		run();
 	}
-	
+
 	private static void ChoiceMyList(Scanner sc) {
 		DataDAO dd = DataDAO.newInstance();
 		dd.ChoiceMyList();
