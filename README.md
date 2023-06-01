@@ -11,3 +11,5 @@
 
 
 # 📺 실행 화면
+### 기본 실행 화면
+![image](https://github.com/helmijin/Mini_project_add/assets/113495471/639aa8b4-aa48-4b28-9e20-c5f624586645)
