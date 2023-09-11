@@ -16,7 +16,13 @@
 ### 기본 실행 화면
 ![image](https://github.com/helmijin/Mini_project_add/assets/113495471/aad3b98c-6f4b-4510-ac10-ecaf832e9b34)
 
-
+1. 리스트 : 최신 영화 목록을 보여줌
+2. 등록 : 새로운 영화 등록 가능
+3. 삭제 : 등록된 영화 삭제
+4. 검색 : 감독이름/영화제목/장르 등으로 영화 검색 가능
+5. 크롤링 : 최신 영화 목록 업데이트
+6. 랜덤 추첨 : 전체 평점 7점 이상의 영화 랜덤 추천
+7. 마이리스트 : 보고 싶은 영화 등록해서 리스트를 만들 수 있음
 #### 리스트
 ![image](https://github.com/helmijin/Mini_project_add/assets/113495471/2719e516-c56f-4852-aab9-af23ebb2ee22)
 
